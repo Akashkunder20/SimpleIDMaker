@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Card Maker</title>
+  <link rel="stylesheet" href="style.css">
+  <a href="login.html"></a>
+</head>
+<body>
+  <h2>College ID Card Generator</h2>
+  
+  <div class="form-container">
+    <label>Name: <input type="text" id="name"></label>
+    <label>Course: <input type="text" id="course"></label>
+    <label>Roll No: <input type="text" id="roll"></label>
+    <label>Validity: <input type="text" id="validity"></label>
+    <label>Date of Birth: <input type="date" id="dob"></label>
+    
+    <label>Blood Group:
+      <select id="blood">
+        <option value="">Select</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+      </select>
+    </label>
+    
+    <label>Contact No: <input type="text" id="contact"></label>
+    <label>Address: <textarea id="address"></textarea></label>
+    <label>Upload Photo: <input type="file" id="photo" accept="image/*"></label>
+    
+    <div class="button-container">
+  <button onclick="generateID()">Generate</button>
+  <button onclick="downloadID()">Download</button>
+  </div>
+  </div>
+  
+  <div id="id-card">
+    <div class="header">MAHATMA GANDHI MEMORIAL COLLEGE</div>
+    <div class="header">UDUPI, PH: 0820-2520359</div>
+    <div class="photo">
+      <img id="id-photo" src="" alt="Student Photo">
+    </div>
+    <div class="info">
+      <p><strong>Name:</strong> <span id="out-name"></span></p>
+      <p><strong>Course:</strong> <span id="out-course"></span></p>
+      <p><strong>Roll No:</strong> <span id="out-roll"></span></p>
+      <p><strong>Validity:</strong> <span id="out-validity"></span></p>
+      <p><strong>DOB:</strong> <span id="out-dob"></span></p>
+      <p><strong>Blood Group:</strong> <span id="out-blood"></span></p>
+      <p><strong>Contact:</strong> <span id="out-contact"></span></p>
+      <p><strong>Address:</strong> <span id="out-address"></span></p>
+    </div>
+
+    <!-- ✅ College footer -->
+    <!--<div class="footer">MGM College, Udupi</div>-->
+    
+    <div class="card-footer"></div>
+  </div>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script src="script.js"></script>
+</body> 
+</html>

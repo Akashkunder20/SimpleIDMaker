@@ -1,0 +1,266 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e94057, #f27121);
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #030511;
+  font-size: 24px;
+}
+
+/* Form Styling */
+.form-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.form-container label {
+  display: block;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+  width: 90%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;  /* Ensures padding & border are inside width */
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    width: 100%;  /* Full width on smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    width: 100%;
+  }
+}
+
+.form-container button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  background: #1a237e;
+  color: white;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background: #0d1857;
+}
+
+/* ID Card Styling */
+#id-card {
+  width: 300px;
+  min-height: 460px;
+  border: 2px solid #2c3e50;
+  border-radius: 12px;
+  margin: 30px auto;
+  padding: 12px 0;
+  padding-top: 0;
+  text-align: left;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #f9f9fb;
+  background: #5b0af0;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  margin-top: 12px;
+  border: 2px solid #2c3e50;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 0 10px;
+  word-wrap: break-word;
+}
+
+/* Small college image at bottom-right */
+#id-card::after {
+  content: "";
+  position: absolute;
+  bottom: 120px;
+  right: 20px;
+  width: 100px;
+  height: 60px;
+  background: url('mo.jpg') no-repeat center;
+  background-size: cover;
+  border: 1px solid #2c3e50;
+  border-radius: 6px;
+  opacity: 0.9;
+}
+
+/* Buttons container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.button-container button {
+  padding: 10px 15px;
+  border: none;
+  background: #1a237e;
+  color: white;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button-container button:hover {
+  background: #0d1857;
+}
+
+/* Footer bar */
+.card-footer {
+  width: 100%;
+  background: #5b0af0;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+--------------------------------*/
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .form-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    width: 100%;
+  }
+
+  #id-card {
+    width: 90%;
+    min-height: auto;
+  }
+
+  .photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  #id-card::after {
+    width: 80px;
+    height: 50px;
+    right: 10px;
+    bottom: 100px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-container button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  .form-container {
+    padding: 10px;
+  }
+
+  #id-card {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .info {
+    font-size: 12px;
+  }
+
+  .card-footer {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+}
